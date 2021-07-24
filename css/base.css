@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body {
+    font-size: 32px;
+    
+    /* フォントの種類を指定するプロパティ*/
+    font-family: "Meiryo", "メイリオ";
+    background-color: skyblue;
+
+}
+
+h1 {
+    /* 背景色を指定するプロパティ */
+    background-color: skyblue;
+   }
+  
+
+input[type="submit"] {
+ border: 1px solid #0086F9;
+ border-radius: 4px;
+ background: linear-gradient(0deg, #0086f9, #b6d6f7);
+ color: #FFF;
+}
+
+input[type="reset"] {
+ border: 1px solid #0086F9;
+ border-radius: 4px;
+ background: linear-gradient(45deg, #0086f9, #b6d6f7);
+ color: #FFF;
+}
+
+input[type="button"] {
+ border: 1px solid #0086F9;
+ border-radius: 4px;
+ background: linear-gradient(90deg, #0086f9, #b6d6f7);
+ color: #FFF;
+}
+
+dl {
+    width: 450px ;
+    height: 10em ;
+    padding: 0px 1em ;
+    text-align: center ;
+    overflow: auto ;
+}
+
+dt {
+    width: 450px ;
+    height: 1.6em ;
+    padding: 0px 1em ;
+    background-color: #8F82F8 ;
+}
+
+dd {
+    margin-left: 0px ;
+    width: 450px ;
+    padding: 0px 1em ;
+    font-size: 0.9em ;
+    text-align: left ;
+    background-color: #FDF6DF ;
+}

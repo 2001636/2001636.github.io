@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Mika OKUDA" />
+    <meta name="keyword" content="Africa" />
+    <title>私のおすすめ漫画</title>
+
+
+<body>
+    <!--　ページのヘッダー情報（タイトルとかメニューとか）-->
+    <header>
+        <!-- h1は見出し -->
+        <h1>私のおすすめ異世界漫画</h1>
+    </header>
+    
+　　<!--　汎用コンテナ<div> 要素をグルーピングしたり階層構造を付けたりすることができる-->
+    <div>
+        <h2>「穏やか貴族の休暇のすすめ」</h2>
+
+    <div>
+
+         <div>
+            <img src="img/穏やか貴族.jpg" width="400" alt="穏やか貴族" />
+         </div>
+        
+         <div>
+         <dl>
+            <dt>＜あらすじ＞</dt>
+         　　<dd>ファンタジーな世界で宰相として活躍していた
+             青年リゼル。
+             彼はある日突然、更に別の異世界へと転移してしまう。
+             だが、持ち前の頭脳と、人たらしな話術を活かして、彼は上級冒険者ジルを相棒にし、自らも冒険者として華麗に転身。
+             もとの世界に戻れるかもわからないのに、「休暇だと思って楽しみます」と軽いノリで口ずさみ、異世界生活を存分に満喫していく。
+             有閑貴族の異世界まったり冒険ファンタジー！</dd>
+         </dl>
+        
+         <div>
+        <dl>
+            <dt>＜おすすめの理由＞</dt>
+         　　<dd>主要キャラクターが皆魅力的ですが、特に私的には主人公が魅力的です。
+             自分が住んでいた世界から違う世界へと飛んでしまっているのに、「休暇」という一言で済ませ、その環境を楽しもうとする主人公の凄さと、とにかく人たらしという所が魅力です。
+             作品を読んでいるだけで、主人公の特別な存在に私もなりたいと思います。
+             主人公主人公が主要キャラ達に愛される系のストーリーが好きな方に特におすすめです！また、イケメンだらけが登場するので、イケメン好きな人にもおすすめ！原作は「小説家になろう」で、小説もおすすめなのでチャックしてみてください！！ドラマCDもあります。</dd>
+        </dl>
+            </div>
+            
+        <div style="width: 600px;">
+        <canvas id="chart" width="600" height="400"></canvas>
+        </div>
+        <!-- 外部のjavascriptファイルを読み込む -->
+        <!-- 読み込む順番が重要 -->
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        
+        <!-- Chart.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.js" integrity="sha512-lUsN5TEogpe12qeV8NF4cxlJJatTZ12jnx9WXkFXOy7yFbuHwYRTjmctvwbRIuZPhv+lpvy7Cm9o8T9e+9pTrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Chartを使ってみる -->
+        <script src="js/test-chart.js"></script>
+        
+        <script>
+            var ctx = $('#chart');
+            var mychart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        '世界観・設定',
+                        'キャラクター',
+                        'エンターテイメント性',
+                        'ストーリー',
+                        'おもしろさ'
+                    ],
+                    datasets: [{
+                        label: 'ジャンル',
+                        data: [
+                            90,100,80,75,80
+                        ],
+                        backgroundColor: 'rgba(241, 107, 141, 0.5)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        borderWidth: 1,
+                        pointBackgroundColor: 'rgb(46,106,177)',
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'サンプルグラフ',
+                    },
+                    scale: {
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            stepSize: 10,
+                            callback: function(value, index, values){
+                                return  value +  '単位'
+                            }
+                        },
+                    }
+                }
+            });
+        </script>
+
+
+　　　　<div>
+        <h3>問い合わせ</h3>
+　　　　　　　<form action="#" method="POST">
+    　　　　　　　<div>
+                   <label>姓：</label>
+                   <input type="text" name="lastname" id="last-name" placeholder="ここには姓を入れてね" required> 
+    　　　　　　　
+                   <label>
+                       名：
+                       <input type="text" name="fristname" id="fristname">
+                   </label>
+                </div>>
+
+                <div>
+                    <input type="checkbox" name="agreement" id="agreement" checked>
+                    <label for="agreement">プライバシーポリシーに同意する</label>
+                </div>
+                <label>
+                    <input type="radio" name="sex" value="male">
+                    男性
+                <input type="radio">
+                </label>
+                <label>
+                    <input type="radio" name="sex" value="female">
+                    女性
+                </label>
+                <label>
+                    <input type="radio" name="sex" value="other">
+                    その他
+                </label>
+                <div>
+                <label for="requests">コメント欄：</label>
+                <textarea name="requests" id="requests" cols="30" rows="10"></textarea>
+                </div>
+
+
+    <!-- フッター（著作権マークとか...)-->
+    <footer>
+        Copyright &copy; Mika OKUDA, All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
